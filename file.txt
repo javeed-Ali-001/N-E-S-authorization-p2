@@ -1,0 +1,21 @@
+3.2 JWT Package
+jsonwebtoken package provides jwt.sign and jwt.verify functions
+
+jwt.sign() function takes payload, secret key, options as arguments and generates JWTToken out of it
+jwt.verify() verifies jwtToken and if it’s valid, returns payload. Else, it throws an error
+
+==============================
+npm install jsonwebtoken
+================================
+
+
+4. Login User API by generating the JWT Token
+When the user tries to log in, verify the Password.
+Returns JWT Token if the password matches else return Invalid Password with status code 400.
+
+5. How to pass JWT Token?
+We have to add an authorization header to our request and the JWT Token is passed as a Bearer token
+
+6. Get Books API with Token Authentication
+Here we check for JWT Token from Headers.
+If JWT Token is not present it returns an Invalid Access Token with status code 401 else verify the JWT Token.
